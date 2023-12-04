@@ -1,12 +1,12 @@
-import { useEffect, useRef } from "react";
-import gsap from "gsap";
+import { useEffect, useRef } from 'react';
+import gsap from 'gsap';
 
 const lines = [
-  "Hello there",
-  "You can call me Fran",
-  "I love my job",
-  "Building things, optimizing stuff",
-  "Thanks for comming",
+  'Hello there',
+  'You can call me Fran',
+  'I love my job',
+  'Building things, optimizing stuff',
+  'Thanks for comming',
 ];
 
 interface AnimatedLineProps {
@@ -21,32 +21,28 @@ export const AnimatedLine = ({ text, delay = 0, duration = 2 }: AnimatedLineProp
 
   useEffect(() => {
     gsap
-      .timeline({repeat: 4, repeatDelay: 1})
-      .from(
-        textContainer.current,
-        {
-          delay,
-          duration,
-          y: 40,
-          opacity: 0,
-          ease: "power2.inOut",
-        },
-      )
-      .to(
-        textContainer.current,
-        {
-          duration: duration - 0.5,
-          delay: 0.5,
-          opacity: 0,
-          ease: "power2.inOut",
-        },
-      )
+      .timeline({ repeat: 4, repeatDelay: 1 })
+      .from(textContainer.current, {
+        delay,
+        duration,
+        y: 40,
+        opacity: 0,
+        ease: 'power2.inOut',
+      })
+      .to(textContainer.current, {
+        duration: duration - 0.5,
+        delay: 0.5,
+        opacity: 0,
+        ease: 'power2.inOut',
+      })
       .add(loadNewLine);
   }, []);
 
   return (
     <>
-      <p ref={textContainer} className="text-[20vw] font-fancy">{text}</p>
+      <p ref={textContainer} className="some-class font-fancy text-[20vw]">
+        {text}
+      </p>
     </>
   );
 };
