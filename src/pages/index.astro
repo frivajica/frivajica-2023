@@ -1,0 +1,10 @@
+---
+import Layout from '../layouts/index.astro';
+import { Intro } from '../components/Intro';
+---
+
+<Layout title="Welcome to Astro.">
+	<main>
+		<Intro client:load />
+	</main>
+</Layout>

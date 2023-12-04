@@ -1,0 +1,23 @@
+---
+import { Header } from "../components/Header";
+import Layout from "./index.astro";
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<Layout title={title}>
+	<Header />
+	<main>
+		<slot />
+	</main>
+</Layout>
+
+<style>
+	html {
+		background: #13151a;
+	}
+</style>
