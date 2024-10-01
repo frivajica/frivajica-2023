@@ -105,5 +105,12 @@ module.exports = {
         'prettier/prettier': 'off',
       },
     },
+    {
+      files: ['tailwind.config.mjs'],
+      parser: '@typescript-eslint/parser',
+      rules: {
+        '@typescript-eslint/no-var-requires': 'off',
+      },
+    },
   ],
 };
