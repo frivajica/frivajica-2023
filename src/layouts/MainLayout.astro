@@ -1,5 +1,5 @@
 ---
-import { Header } from "../components/Header";
+import { NavBar } from "../components/NavBar";
 import Layout from "./index.astro";
 
 interface Props {
@@ -10,14 +10,8 @@ const { title } = Astro.props;
 ---
 
 <Layout title={title}>
-	<Header />
+	<NavBar client:load />
 	<main>
 		<slot />
 	</main>
 </Layout>
-
-<style>
-	html {
-		background: #13151a;
-	}
-</style>
