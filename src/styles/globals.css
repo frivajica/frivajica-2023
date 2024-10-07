@@ -4,60 +4,60 @@
 
 @layer base {
   :root {
-    --background: #D1CDB7;
+    --background: #d1cdb7;
     --foreground: #020817;
-    --card: #FFFFFF;
+    --card: #ffffff;
     --card-foreground: #020817;
-    --popover: #FFFFFF;
+    --popover: #ffffff;
     --popover-foreground: #020817;
-    --primary: #0F172A;
-    --primary-foreground: #F8FAFC;
-    --secondary: #F1F5F9;
-    --secondary-foreground: #0F172A;
-    --muted: #F1F5F9;
-    --muted-foreground: #64748B;
-    --accent: #F1F5F9;
-    --accent-foreground: #0F172A;
-    --destructive: #EF4444;
-    --destructive-foreground: #F8FAFC;
-    --border: #CDC9B2;
-    --input: #E2E8F0;
+    --primary: #454138;
+    --primary-foreground: #f8fafc;
+    --secondary: #bab5a1;
+    --secondary-foreground: #0f172a;
+    --muted: #dcd8c0;
+    --muted-foreground: #64748b;
+    --accent: #f1f5f9;
+    --accent-foreground: #0f172a;
+    --destructive: #ef4444;
+    --destructive-foreground: #f8fafc;
+    --border: #cdc9b2;
+    --input: #e2e8f0;
     --ring: #020817;
     --radius: 0.5rem;
-    --chart-1: #E76E50;
-    --chart-2: #2A9D90;
+    --chart-1: #e76e50;
+    --chart-2: #2a9d90;
     --chart-3: #274754;
-    --chart-4: #E8C468;
-    --chart-5: #F4A462;
-		--footer-background: #696559;
+    --chart-4: #e8c468;
+    --chart-5: #f4a462;
+    --footer-background: #696559;
   }
 
   .dark {
     --background: #020817;
-    --foreground: #F8FAFC;
+    --foreground: #f8fafc;
     --card: #020817;
-    --card-foreground: #F8FAFC;
+    --card-foreground: #f8fafc;
     --popover: #020817;
-    --popover-foreground: #F8FAFC;
-    --primary: #F8FAFC;
-    --primary-foreground: #0F172A;
-    --secondary: #1E293B;
-    --secondary-foreground: #F8FAFC;
-    --muted: #1E293B;
-    --muted-foreground: #94A3B8;
-    --accent: #1E293B;
-    --accent-foreground: #F8FAFC;
-    --destructive: #7F1D1D;
-    --destructive-foreground: #F8FAFC;
-    --border: #1E293B;
-    --input: #1E293B;
-    --ring: #E1CFCB;
-    --chart-1: #2662D9;
-    --chart-2: #2EB88A;
-    --chart-3: #E88C30;
-    --chart-4: #AF57DB;
-    --chart-5: #E23670;
-		--footer-background: #696559;
+    --popover-foreground: #f8fafc;
+    --primary: #f8fafc;
+    --primary-foreground: #0f172a;
+    --secondary: #1e293b;
+    --secondary-foreground: #f8fafc;
+    --muted: #1e293b;
+    --muted-foreground: #94a3b8;
+    --accent: #1e293b;
+    --accent-foreground: #f8fafc;
+    --destructive: #7f1d1d;
+    --destructive-foreground: #f8fafc;
+    --border: #1e293b;
+    --input: #1e293b;
+    --ring: #e1cfcb;
+    --chart-1: #2662d9;
+    --chart-2: #2eb88a;
+    --chart-3: #e88c30;
+    --chart-4: #af57db;
+    --chart-5: #e23670;
+    --footer-background: #696559;
   }
 }
 
@@ -65,16 +65,24 @@
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
 
-		background-size: 0.3rem 0.3rem;
-		-webkit-background-size: 0.3rem 0.3rem;
-		-moz-background-size: 0.3rem 0.3rem;
-		background-image: linear-gradient(to right, #ccc8b1 1px, rgba(204,200,177,0) 1px), linear-gradient(to bottom, #ccc8b1 1px, rgba(204,200,177,0) 1px);
-		background-image: -webkit-linear-gradient(left, #ccc8b1 1px, rgba(204,200,177,0) 1px), -webkit-linear-gradient(top, #ccc8b1 1px, rgba(204,200,177,0) 1px);
-		background-image: -moz-linear-gradient(left, #ccc8b1 1px, rgba(204,200,177,0) 1px), -moz-linear-gradient(top, #ccc8b1 1px, rgba(204,200,177,0) 1px);
-		background-image: -o-linear-gradient(left, #ccc8b1 1px, rgba(204,200,177,0) 1px), -o-linear-gradient(top, #ccc8b1 1px, rgba(204,200,177,0) 1px);
-		background-image: -ms-linear-gradient(left, #ccc8b1 1px, rgba(204,200,177,0) 1px), -ms-linear-gradient(top, #ccc8b1 1px, rgba(204,200,177,0) 1px);
+    font-family: 'Inter Variable', sans-serif;
+    font-weight: 200;
+    letter-spacing: 0.03rem;
+
+    background-size: 0.3rem 0.3rem;
+    background-image: linear-gradient(to right, #ccc8b1 1px, rgba(204, 200, 177, 0) 1px),
+      linear-gradient(to bottom, #ccc8b1 1px, rgba(204, 200, 177, 0) 1px);
+  }
+
+  button {
+    height: 2.5rem;
+    padding-inline: 0.5rem;
+    background-color: var(--secondary);
+    color: var(--primary);
+    cursor: pointer;
   }
 }

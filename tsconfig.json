@@ -1,6 +1,6 @@
 {
   "extends": "astro/tsconfigs/strict",
-  "include": [".eslintrc.cjs", "./src/**/*", "tailwind.config.mjs", "astro.config.mjs"],
+  "include": [".eslintrc.cjs", "./src/**/*", "tailwind.config.mjs", "astro.config.mjs", "postcss.config.cjs"],
   "compilerOptions": {
     "jsx": "react-jsx",
     "jsxImportSource": "react",

@@ -3,14 +3,14 @@ const { default: flattenColorPalette } = require('tailwindcss/lib/util/flattenCo
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: ['class'],
-  content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
-  ],
+  content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
   prefix: '',
   theme: {
+    fontFamily: {
+      roboto: ['"Roboto"', 'sans-serif'],
+      inter: ['Inter Variable', 'sans-serif'],
+      montse: ['Montserrat Variable', 'sans-serif'],
+    },
     container: {
       center: true,
       padding: '2rem',
@@ -19,6 +19,9 @@ module.exports = {
       },
     },
     extend: {
+      transitionProperty: {
+        height: 'height',
+      },
       colors: {
         border: 'var(--border)',
         input: 'var(--input)',
